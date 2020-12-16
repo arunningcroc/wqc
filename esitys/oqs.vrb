@@ -1,0 +1,17 @@
+computational note: you can remove 0-padding from Hamiltonians without losing any important information about the energy levels:
+\begin{align}
+H = \begin{bmatrix}
+0 & 0 & 0 & 0 & 0 & 0\\
+0 & a & b & c & d & 0\\
+0 & f & b & c & d & 0\\
+0 & a & p & q & d & 0\\
+0 & a & b & c & d & 0\\
+0 & 0 & 0 & 0 & 0 & 0
+\end{bmatrix}\iff H = \begin{bmatrix}
+a & b & c & d\\
+f & b & c & d\\
+a & p & q & d\\
+a & b & c & d
+\end{bmatrix}
+\end{align}
+Only zeroed eigenvalues are lost, and there are $2n$ of them, where n is the amount of padding removed.
